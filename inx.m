@@ -10,6 +10,8 @@
 #define CODE_SIZE 128
 
 #ifdef X86_64
+// X86_64 from ===> https://gist.github.com/knightsc/45edfc4903a9d2fa9f5905f60b02ce5a
+
 char injectedCode[] =
     // "\xCC"                            // int3
 
@@ -58,6 +60,7 @@ char injectedCode[] =
     "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
     "\x00";
 #else
+// arm_64 from ===> https://stackoverflow.com/questions/76238521/arm64-code-injection-on-apple-m1-crashes-with-exc-bad-access
 
 uint32_t copyBits(uint32_t reg, uint16_t value) {
   for (int i = 0; i <= 15; i++) {
