@@ -71,3 +71,4 @@ tests/example_tap1000
 tests/*.dylib
 bin/inx
 .DS_Store
+.build/
