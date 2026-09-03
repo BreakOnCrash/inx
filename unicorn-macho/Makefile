@@ -20,4 +20,4 @@ run: $(GUEST)
 	go run .
 
 clean:
-	rm -f $(GUEST) uc-macho
+	rm -f $(GUEST)
